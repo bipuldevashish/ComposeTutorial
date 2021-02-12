@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.bipuldevashish.melody.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.bipuldevashish.melody.ui.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.bipuldevashish.melody.ui.PlayerFragment"
+        android:label="Music Player"
+        tools:layout="@layout/fragment_player" />
+    <fragment
+        android:id="@+id/firebaseFragment"
+        android:name="com.bipuldevashish.melody.ui.FirebaseFragment"
+        android:label="Firebase"
+        tools:layout="@layout/fragment_firebase" >
+        <action
+            android:id="@+id/action_firebaseFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="com.bipuldevashish.melody.ui.DownloadFragment"
+        android:label="Downloads"
+        tools:layout="@layout/fragment_download" >
+        <action
+            android:id="@+id/action_downloadFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listDetailsFragment"
+        android:name="com.bipuldevashish.melody.ui.ListDetailsFragment"
+        android:label="fragment_list_details"
+        tools:layout="@layout/fragment_list_details" >
+        <action
+            android:id="@+id/action_listDetailsFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+</navigation>
